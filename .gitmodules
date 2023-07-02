@@ -1,3 +1,4 @@
 [submodule "themes/poison"]
 	path = themes/poison
 	url = https://github.com/lukeorth/poison
+	branch = main
