@@ -1,5 +1,6 @@
 -	adjust .gitmodules
 -	add .nojekyll
 -	create config.yaml in .github/workflows
+-	add image avatar in the static folder
 step:
 	
