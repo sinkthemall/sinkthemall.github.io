@@ -9,7 +9,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
 
 [params]
     brand = "d4rkn19ht's blog"                      # name of your site - appears in the sidebar
-    # brand_image = "/images/test.jpg"    # path to the image shown in the sidebar
+    brand_image = "/assets/images/avatar.jpg"    # path to the image shown in the sidebar
     description = "A blog about ctf" # Used as default meta description if not specified in front matter
     dark_mode = true                      # optional - defaults to false
     # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
