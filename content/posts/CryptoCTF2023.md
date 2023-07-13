@@ -2,10 +2,11 @@
 title: "CryptoCTF2023"
 date: 2023-07-13T14:54:28+07:00
 draft: false
-tags: cryptography
-authors: d4rkn19ht
-categories: writeup
-description: writeup for cryptoctf2023
+tags: [""cryptography"]
+authors: 
+    -   d4rkn19ht
+categories: ["writeup"]
+description: "writeup for cryptoctf2023"
 ---
 ### 1.Insights
 ```python
