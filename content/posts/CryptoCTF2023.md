@@ -1,6 +1,6 @@
 ---
 title: "CryptoCTF2023"
-# description: "writeup for cryptoctf2023"
+description: "writeup for cryptoctf2023"
 date: 2023-07-13T14:54:28+07:00
 categories: ["writeup"]
 tags: ["cryptography"]
@@ -10,6 +10,8 @@ authors:
 
 
 ---
+Writeup for all challenge that I solved in CryptoCTF 2023.
+
 ### 1.Insights
 ```python
 #!/usr/bin/env sage
