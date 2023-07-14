@@ -381,3 +381,139 @@ for i in range(1, len(enc)):
 print(flag)
 ```
 FLAG: ```CCTF{__B4ck_0r!F1c3__C1pHeR_!!}```
+
+### 5.Roldy
+```python
+#!/usr/bin/env python3
+
+from Crypto.Util.number import *
+from pyope.ope import OPE as enc
+from pyope.ope import ValueRange
+import sys
+from secret import key, flag
+
+def die(*args):
+	pr(*args)
+	quit()
+
+def pr(*args):
+	s = " ".join(map(str, args))
+	sys.stdout.write(s + "\n")
+	sys.stdout.flush()
+
+def sc(): 
+	return sys.stdin.buffer.readline()
+
+def encrypt(msg, key, params):
+	if len(msg) % 16 != 0:
+		msg += (16 - len(msg) % 16) * b'*'
+	p, k1, k2 = params
+	msg = [msg[_*16:_*16 + 16] for _ in range(len(msg) // 16)]
+	m = [bytes_to_long(_) for _ in msg]
+	inra = ValueRange(0, 2**128)
+	oura = ValueRange(k1 + 1, k2 * p + 1)
+	_enc = enc(key, in_range = inra, out_range = oura)
+	C = [_enc.encrypt(_) for _ in m]
+	return C
+
+def main():
+	border = "|"
+	pr(border*72)
+	pr(border, " Welcome to Roldy combat, we implemented an encryption method to    ", border)
+	pr(border, " protect our secret. Please note that there is a flaw in our method ", border)
+	pr(border, " Can you examine it and get the flag?                               ", border)
+	pr(border*72)
+
+	pr(border, 'Generating parameters, please wait...')
+	p, k1, k2 = [getPrime(129)] + [getPrime(64) for _ in '__']
+	C = encrypt(flag, key, (p, k1, k2))
+
+	while True:
+			pr("| Options: \n|\t[E]ncrypted flag! \n|\t[T]ry encryption \n|\t[Q]uit")
+			ans = sc().decode().lower().strip()
+			if ans == 'e':
+				pr(border, f'encrypt(flag, key, params) = {C}')
+			elif ans == 't':
+				pr(border, 'Please send your message to encrypt: ')
+				msg = sc().rstrip(b'\n')
+				if len(msg) > 64:
+					pr(border, 'Your message is too long! Sorry!!')
+				C = encrypt(msg, key, (p, k1, k2))
+				pr(border, f'C = {C}')
+			elif ans == 'q':
+				die(border, "Quitting ...")
+			else:
+				die(border, "Bye ...")
+
+if __name__ == '__main__':
+	main()
+```
+This time, we are facing an oracle challenge. The server give us 2 choice:
+-	Get the encrypted flag
+-	Encrypt an message
+
+So in the first glance, I notice that the server used the pyOPE cryptosystem. After searching, I know that pyOPE is an implementation of Boldyreva symmetric order-preserving encryption scheme. This scheme has an interesting property:
+```
+if m1 < m2, then f(m1) < f(m2)
+```
+Because of this, we can use binary search to searching for the correct flag. In my solution, you will notice that I reconnect to the server multiple times. This happened because server doesn't allow  to send mupltiple queries (I think it's for keep the server away from crashing), but of course this doesn't affect the solution much.
+
+Source:
+```python
+from pwn import *
+from Crypto.Util.number import long_to_bytes as ltb, bytes_to_long as btl 
+s = remote("02.cr.yp.toc.tf", 31377)
+
+def establish():
+    global s
+    s = remote("02.cr.yp.toc.tf", 31377)
+    s.recvuntil(b"[Q]uit\n")
+    s.sendline(b"e")
+
+    s.recvuntil(b" = ")
+    enc = eval(s.recvline(0).decode())
+    return enc 
+
+
+def encrypt(val):
+    global s
+    s.sendlineafter(b"[Q]uit\n", b"t")
+    s.sendlineafter(b"encrypt: \n", ltb(val))
+    s.recvuntil(b" = ")
+    ok = eval(s.recvline(0).decode())
+    return ok[0]
+
+
+def bs(blockid):
+ #   [89370465111452328101028130174938390560, 90554308795198268800333083338000572447]
+    flag = b""
+    s.close()
+    for i in range(len(flag), 16):
+        l = 0
+        r = 127
+        sleep(1)
+        enc = establish()
+        while l < r:
+            testchar = ((l + r) // 2) + 1
+            print(f"chartest: {testchar}")
+            payload = flag + bytes([testchar]) + b"\x00" * (16 - i - 1)
+            ok = encrypt(btl(payload))
+            if ok <= enc[blockid]:
+                l = testchar
+            else:
+                r = testchar - 1
+        flag += bytes([l])
+
+        print(f"Flag found: {flag}")
+        s.close()
+    return flag
+
+flag = b""
+flag += bs(0)
+flag += bs(1)
+flag += bs(2)
+flag += bs(3)
+print(flag)
+```
+
+FLAG: ```CCTF{Boldyreva_5ymMe7rIC_0rD3r_pRe5Erv!n9_3nCryp7i0n!_LStfig9TM}```
