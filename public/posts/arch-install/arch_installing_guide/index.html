@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>How to install Arch OS &middot; D4rkn19ht</title>
+  <meta name="title" content="How to install Arch OS &middot; D4rkn19ht" />
+  
+  <meta name="description" content="Personal blog about things I learn" />
+  <meta name="keywords" content="Arch, " />
+  
+  
+  <link rel="canonical" href="//localhost:1313/posts/arch-install/arch_installing_guide/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.7e511937ade47127f0cc4d4943b7cc62b8f7cf37a9c19383694c5760ad479781345dbedf1b713a57a80254844a8966c81cb86298461c8f60c196036e053f9605.css"
+    integrity="sha512-flEZN63kcSfwzE1JQ7fMYrj3zzepwZODaUxXYK1Hl4E0Xb7fG3E6V6gCVIRKiWbIHLhimEYcj2DBlgNuBT&#43;WBQ==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a5312a15393b6da77a379acf5b55576cabc85cb09cf0973d143812be82d0810982674c92e8564f3999e456d97305ae6f6269c41612d008359d8b94265a99eec5.js"
+    integrity="sha512-pTEqFTk7bad6N5rPW1VXbKvIXLCc8Jc9FDgSvoLQgQmCZ0yS6FZPOZnkVtlzBa5vYmnEFhLQCDWdi5QmWpnuxQ==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="//localhost:1313/posts/arch-install/arch_installing_guide/">
+  <meta property="og:site_name" content="D4rkn19ht">
+  <meta property="og:title" content="How to install Arch OS">
+  <meta property="og:description" content="1. Why Arch # On a beautiful day, a programmer was fiddling with Windows theme configurations, trying to make his computer “cooler than ever.” But, alas, the more he customized, the messier it became; from colors to icons, everything started to feel more “outdated” than modern. While he was holding his head in frustration due to unresolvable bugs, the universe decided to “throw” an Arch Linux distro at him, as if saying, “Try this, my child.”">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-06T10:13:42+07:00">
+    <meta property="article:modified_time" content="2024-11-06T10:13:42+07:00">
+    <meta property="article:tag" content="Arch">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to install Arch OS">
+  <meta name="twitter:description" content="1. Why Arch # On a beautiful day, a programmer was fiddling with Windows theme configurations, trying to make his computer “cooler than ever.” But, alas, the more he customized, the messier it became; from colors to icons, everything started to feel more “outdated” than modern. While he was holding his head in frustration due to unresolvable bugs, the universe decided to “throw” an Arch Linux distro at him, as if saying, “Try this, my child.”">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "How to install Arch OS",
+    "headline": "How to install Arch OS",
+    
+    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003e1. Why Arch \n    \u003cdiv id=\u00221-why-arch\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022\n            style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#1-why-arch\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003eOn a beautiful day, a programmer was fiddling with Windows theme configurations, trying to make his computer \u0026ldquo;cooler than ever.\u0026rdquo; But, alas, the more he customized, the messier it became; from colors to icons, everything started to feel more \u0026ldquo;outdated\u0026rdquo; than modern. While he was holding his head in frustration due to unresolvable bugs, the universe decided to \u0026ldquo;throw\u0026rdquo; an Arch Linux distro at him, as if saying, \u0026ldquo;Try this, my child.\u0026rdquo;\u003c\/p\u003e",
+    "inLanguage": "en",
+    "url" : "\/\/localhost:1313\/posts\/arch-install\/arch_installing_guide\/",
+    "author" : {
+      "@type": "Person",
+      "name": "d4rkn19ht"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-11-06T10:13:42\u002b07:00",
+    "datePublished": "2024-11-06T10:13:42\u002b07:00",
+    
+    "dateModified": "2024-11-06T10:13:42\u002b07:00",
+    
+    "keywords": ["Arch"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "522"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="d4rkn19ht" />
+  
+  
+  
+  <link href="https://www.facebook.com/takao.akizuki.50/" rel="me" />
+  
+  
+  <link href="https://github.com/sinkthemall" rel="me" />
+  
+  
+  <link href="https://x.com/d4rkn19ht_" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">D4rkn19ht</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Blog
+    </p>
+</a>
+
+
+
+            
+            
+  <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        About
+    </p>
+</a>
+
+
+
+            
+             
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a  class="text-base font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="">
+      Category
+    </a>
+    <span>
+      
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+        <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            Game-hacking
+          </p>
+        </a>
+        
+        <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            Linux-kernel-docs
+          </p>
+        </a>
+        
+        <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            Malware-docs
+          </p>
+        </a>
+        
+        <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            Writeup
+          </p>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Tags
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="https://github.com/sinkthemall"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <span >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium" title="">
+        
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Blog
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            About
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                     
+  <li class="mt-1">
+    <a class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Category
+        </p>
+        <span>
+            
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+        </span>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            Game-hacking
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            Linux-kernel-docs
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            Malware-docs
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            Writeup
+        </p>
+    </a>
+</li>
+
+<li class="mb-2"></li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Tags
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://github.com/sinkthemall"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <div >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+ 
+  
+   
+  
+ 
+
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/img/goblin_slayer_wallpaper.jpg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      How to install Arch OS
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-11-06T10:13:42&#43;07:00">6 November 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/arch/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Arch
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="d4rkn19ht" src="/img/avatar.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      d4rkn19ht
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.facebook.com/takao.akizuki.50/"
+          target="_blank"
+          aria-label="Facebook"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/sinkthemall"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://x.com/d4rkn19ht_"
+          target="_blank"
+          aria-label="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-why-arch">1. Why Arch</a></li>
+    <li><a href="#2-installation">2. Installation</a>
+      <ul>
+        <li><a href="#21-basic-knowledge">2.1 Basic Knowledge</a>
+          <ul>
+            <li><a href="#211-computer-boot-up-process">2.1.1 Computer Boot-Up Process</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-why-arch">1. Why Arch</a></li>
+    <li><a href="#2-installation">2. Installation</a>
+      <ul>
+        <li><a href="#21-basic-knowledge">2.1 Basic Knowledge</a>
+          <ul>
+            <li><a href="#211-computer-boot-up-process">2.1.1 Computer Boot-Up Process</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">1. Why Arch 
+    <div id="1-why-arch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#1-why-arch" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>On a beautiful day, a programmer was fiddling with Windows theme configurations, trying to make his computer &ldquo;cooler than ever.&rdquo; But, alas, the more he customized, the messier it became; from colors to icons, everything started to feel more &ldquo;outdated&rdquo; than modern. While he was holding his head in frustration due to unresolvable bugs, the universe decided to &ldquo;throw&rdquo; an Arch Linux distro at him, as if saying, &ldquo;Try this, my child.&rdquo;</p>
+<p>At first, the programmer felt overwhelmed with the chaos in front of him. But after a short time of &ldquo;struggling,&rdquo; he discovered the truth: &ldquo;Simplicity is the ultimate sophistication.&rdquo; Instead of trying to beautify his setup with complex themes, he could now customize a powerful operating system according to his desires, without worrying about unnecessary troubles.</p>
+<p>That’s the beginning of my story of moving to Arch (though that’s not really how it happened :)))</p>
+<p>So why Arch instead of Ubuntu or any other Linux distro? Here are the reasons:</p>
+<ul>
+<li>First, Arch follows the KISS principle (Keep It Simple Stupid), focusing on minimalism and keeping everything as simple as possible. Arch provides a basic setup, and from there, users configure settings to their liking. Arch is more suitable for users with long-term Linux experience who want to customize everything precisely.</li>
+<li><strong>Arch Linux</strong> uses a rolling release model, meaning updates are done continuously without the need for major upgrades. This can lead to a more up-to-date system but requires users to be cautious with updates and comfortable with handling potential issues from ongoing updates.</li>
+<li><strong>Arch Linux</strong> uses <strong><code>pacman</code></strong> as its package manager, known for its speed and simplicity. It also has the Arch User Repository (AUR), which contains thousands of community-maintained packages not available in the official repository. This allows users to easily install almost any software but requires some knowledge of building packages from source and security checks.</li>
+<li>My friend installed Arch, so I learned to install it too :))))</li>
+</ul>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="/posts/arch-install/feature_thumbnail.png" alt="Untitled" />
+      
+    </figure>
+</p>
+<p>(I have no prejudice against other OSes, I still use WSL daily; it’s just that Arch offers more things to learn.)</p>
+<p>Those are the reasons why I think Arch is better than other Linux distros. Of course, for those who are lazy and don’t like diving deep into customization, Ubuntu is enough. However, the trade-off is losing control over your desired settings, and it takes up quite a bit of space. One of the things I love about Arch is its customization capability. If you search for &ldquo;unixporn,&rdquo; a well-known Reddit community focused on customization, you’ll find thousands of visually pleasing interfaces. Additionally, installing packages on Arch is much simpler than on Ubuntu… Enough talking about its greatness, let’s start with a guide on how to install Arch. This guide will be quite long and targeted at those who have little to no experience in installing Arch, so feel free to skip sections if you’re already familiar.</p>
+<p>Here is an overview of the guide sections:</p>
+<ul>
+<li>Basic Knowledge
+<ul>
+<li>The computer boot-up process</li>
+<li>Boot modes: UEFI vs. BIOS</li>
+<li>File systems</li>
+<li>Partitioning</li>
+<li>Mounting</li>
+<li>Package manager</li>
+</ul>
+</li>
+<li>Preparation</li>
+<li>Installing Arch</li>
+</ul>
+
+
+<h2 class="relative group">2. Installation 
+    <div id="2-installation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#2-installation" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">2.1 Basic Knowledge 
+    <div id="21-basic-knowledge" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#21-basic-knowledge" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+
+<h4 class="relative group">2.1.1 Computer Boot-Up Process 
+    <div id="211-computer-boot-up-process" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#211-computer-boot-up-process" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<!-- 
+The diagram below shows the OS boot-up process for a computer:
+
+![Untitled](Untitled%201.png)
+
+The image includes some redundant parts we don’t need to focus on. Here, we’ll only pay attention to step 4 in the diagram; steps 5 onward are automatically handled by the kernel (they only fail if there’s a configuration error or an issue with the kernel image, etc.). Below, I’ll briefly explain each step:
+
+- Step 1 - Power On: This is the process that occurs right after pressing the power button to start the computer, during which the BIOS/UEFI initiates and performs pre-boot routines before loading the bootloader.
+- Step 2 - BIOS/UEFI startup: This is the stage where BIOS/UEFI (firmware stored in ROM) performs tasks like hardware checks (Power On Self Test - POST procedure) and loading data from non-volatile memory (such as boot entries...).
+- Step 3 - Detect Devices: At this point, the POST process checks hardware like RAM and hard drives, or detects boot entries from boot devices (such as hard drives, CDs, USB drives…). After checking, control is handed over to choose the boot device.
+- Step 4 - Choose a Boot Device: Choosing a boot device, as a computer can run multiple operating systems and can boot from memory devices to install an OS.
+- Step 5 - Run bootloader: Running the bootloader stored in the boot entry on the drive; the bootloader’s job is to load the operating system (or, more precisely, the kernel image) based on saved configurations in the boot entry → The operating system loads into memory with arguments set according to the configuration file.
+
+At this point, the remaining tasks are handed over to the OS, and we don’t need to do much (if an error occurs during this process, it’s likely due to an issue with the kernel image). I’ve only briefly mentioned the tasks in each step. Next, I’ll explain the definitions and functions of each component in the diagram.
+
+### 2.1.2 Boot Modes: BIOS vs UEFI
+
+For an OS to load into memory, a boot program is essential. This is where BIOS/UEFI comes in. I think most of you who have tinkered with the BIOS menu at startup already understand this to some extent. BIOS stands for "Basic Input/Output System." Essentially, BIOS is a set of instructions stored on a firmware chip located on the computer’s motherboard.
+
+![Untitled](Untitled%202.png)
+
+The function of BIOS has been mentioned above (hardware check, running bootloader). Replacing the outdated BIOS firmware is UEFI (Unified Extensible Firmware Interface). UEFI is an improved and upgraded version of BIOS and has almost completely replaced BIOS on computers in recent years. The reason is that BIOS limitations have hampered some newer hardware.
+
+![Untitled](Untitled%203.png)
+
+One thing to emphasize is that, even though BIOS/UEFI is the first component to run, it is NOT an OS or anything close to an OS. Since it’s stored in ROM (to avoid potential damage and ensure smooth booting), BIOS/UEFI is much smaller than a kernel image. You can find more information on BIOS or UEFI [here](https://www.freecodecamp.org/news/uefi-vs-bios/).
+
+### 2.1.3 Partitioning
+
+Have you ever wondered why, with only one hard drive, your computer has two drive regions (C:\ and D:\)? This is due to partitioning. Partitioning is dividing the hard drive into separate, independent regions. Doing so creates multiple partitions, each independent of the other, so writing on one partition won’t affect the others. Additionally, certain partitions are essential to support the OS boot process.
+
+![Untitled](Untitled%204.png)
+
+For a computer to understand the disk partitions and each partition on the drive, it needs to read the partition table. This table is stored at the beginning of the hard drive. During startup, BIOS/UEFI reads the bytes at the drive’s beginning, containing information about the partition table, partitioning scheme, partitions on the drive, and how they are organized.
+
+![Untitled](Untitled%205.png)
+
+In terms of partitioning schemes, there are currently two main types in use:
+
+- MBR (Master Boot Record): An older scheme used by BIOS. MBR supports up to four primary partitions or three primary partitions and one extended partition containing multiple logical partitions (I’ll explain logical and extended partitions later).
+- GPT (GUID Partition Table): A new partition standard used by UEFI. GPT has no partition limit like MBR, supporting up to 2TB per partition and up to 128 partitions on Windows, or more on other OSes. This will be important later as we’ll use GPT for partitioning instead of MBR.
+
+On a side note:
+
+- Primary partition: Primary partitions store data or are used to boot, containing OS data.
+- Extended partition: This is a special partition because it doesn’t directly store data but holds logical partitions, which are similar to folders.
+- Logical partition: A sub-partition of an extended partition, functioning just like a primary partition. Logical partitions exist to bypass the primary partition limit in the MBR scheme (4 primary partitions).
+
+Other terms you may encounter include:
+
+- ESP (EFI System Partition): A separate partition for storing bootloaders or kernel images to assist with booting; only UEFI uses it, not BIOS.
+- SWAP partition: This partition can be thought of as extended RAM. When the RAM is full, the OS moves some data from RAM to this partition to free up space. When needed, data is swapped back from this partition to RAM.
+
+### 2.1.4 File System
+
+A file system is a way to manage and organize the storing of data and folders. A file system is crucial; without it, the computer wouldn’t know where one file ends (obviously, not at a null byte), which folder stores which files, or how the structure is arranged. Some common file systems include (marked with * indicates those used in Arch installation):
+
+- NTFS (New Technology File System): A new file system standard for Windows, replacing the older FAT standard, with improvements in metadata, performance, security access control, etc. Since this belongs to Windows, we won’t go into depth.
+
+![Untitled](Untitled%206.png)
+
+- * FAT (File Allocation Table): An old file system designed for smaller disks or simpler folder structures. FAT is still in use today, known for its simplicity and high compatibility. However, due to its limitations, using FAT for data storage on a drive isn’t recommended. During the Arch installation, we’ll use FAT for the ESP partition.
+
+![Untitled](Untitled%207.png)
+
+- * Ext4: Simply put, this is the main file system for data storage on Linux, similar to NTFS for Windows. Ext4 offers features like compatibility, extents, and large file size support.
+
+![Untitled](Untitled%208.png)
+
+- * SWAP: This is the file system for the SWAP partition.
+
+### 2.1.5 Mounting
+
+When mentioning file systems and partitions, another term we need to cover is "mounting." So what is mounting? Simply put, mounting makes a partition accessible. Why is this necessary? When booting, the OS has no information about the drive or its partitions and file systems. Therefore, to store and access data on the drive, mounting is required.
+
+![Untitled](Untitled%209.png)
+
+### 2.1.6 Package Manager
+
+Here’s ChatGPT’s explanation of a package manager:
+
+> A package manager is a software tool that automates the process of installing, upgrading, configuring, and removing computer programs for a computer's operating system in a consistent manner. It is a critical component in software management, simplifying the process of maintaining computers and software applications.
+
+A package manager handles installing, updating, or removing packages. If you’re on Windows, you download an installer from the web to install an application. In Arch, this is automated with the “pacman” command (or “apt” for Ubuntu).
+
+This is an overview of the knowledge needed to install Arch. If you prefer a manual installation and already know the basics, you can skip this section. However, I think it will help you better understand and troubleshoot boot issues.
+
+## 2.2 Preparation
+
+- A USB drive
+- Arch ISO file
+- Computer
+- Ethernet connection (for installation), or Wi-Fi or anything else, as long as it can connect to the internet (ping arch.org).
+
+## 2.3 Installing Arch
+
+This guide is based on an article about installing Arch on Hyper-V. Although it’s for a virtual machine, I think many parts are similar to installing on a physical machine. You can find the article [here](https://github.com/kourbou/how-to-hyperv-arch).
+
+- Arch ISO file: Download directly from [archlinux.org/download](https://archlinux.org/download/), using a torrent or wget magnet link.
+- Burn ISO file to USB: This doesn’t need further explanation, and I’m too lazy to write a guide. If you’re unfamiliar with this process, check this link [here](https://unetbootin.github.io/#:~:text=Using%20UNetbootin,boot%20from%20the%20USB%20drive.) for reference.
+
+![Untitled](Untitled%2010.png)
+
+- Adjust boot order: Before installation, adjust the boot order to place the USB boot first. To do this, open the BIOS menu and set the USB as the first boot device:
+
+![Untitled](Untitled%2011.png)
+
+Another important note: Arch does not support secure boot, so disable it in the security settings.
+
+- When restarting and reaching this screen, select the Arch Linux install medium.
+
+![Untitled](Untitled%2012.png)
+
+Once booted, you’ll access a shell that looks like this:
+
+![Untitled](Untitled%2013.png)
+
+First, partition the hard drive as follows:
+
+- According to the original article, the author suggested using fdisk to partition, but I recommend against it since fdisk uses the MBR scheme. Instead, use gdisk to partition. Device files are typically located in the /dev folder, and if there’s only one hard drive (SSD), the filename representing the drive will be /dev/sda (for HDDs, it’s /dev/hda).
+- Enter `gdisk <device filename>` to start partitioning; after entering, you’ll see something like this:
+
+![Untitled](Untitled%2014.png)
+
+- Follow the steps to partition the disk (here, I’m creating three different partitions: ESP, SWAP, and root partition, with partitions /dev/sda1, /dev/sda2, and /dev/sda3. ESP will be around 512MB, SWAP about 4GB, and the root partition will use the remaining space).
+
+```flow
+root@archiso ~ # gdisk /dev/sda
+GPT fdisk (gdisk) version 1.0.9.1
+
+Partition table scan:
+  MBR: not present
+  BSD: not present
+  APM: not present
+  GPT: not present
+
+Creating new GPT entries in memory.
+
+Command (? for help): n
+Partition number (1-128, default 1): ↵
+First sector (34-41943006, default = 2048) or {+-}size{KMGTP}: ↵
+Last sector (2048-41943006, default = 41940991) or {+-}size{KMGTP}: +512M
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): ↵
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): n
+Partition number (2-128, default 2): ↵
+First sector (34-41943006, default = 1050624) or {+-}size{KMGTP}: ↵
+Last sector (1050624-41943006, default = 41940991) or {+-}size{KMGTP}: +4G
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): ↵
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): n
+Partition number (3-128, default 3): ↵
+First sector (34-41943006, default = 9439232) or {+-}size{KMGTP}: ↵
+Last sector (9439232-41943006, default = 41940991) or {+-}size{KMGTP}: ↵
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): ↵
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): y
+OK; writing new GUID partition table (GPT) to /dev/sda.
+The operation has completed successfully.
+```
+
+Once completed, you need to format each partition's file system individually. As mentioned above, `/dev/sda1` (ESP) will be formatted as `FAT`, `/dev/sda2` as `swap`, and `/dev/sda3` as `ext4`. I’ll format `ESP` as `FAT32` since FAT supports backward compatibility.
+
+```flow
+root@archiso ~ # mkfs.fat -F 32 /dev/sda1
+mkfs.fat 4.2 (2021-01-31)
+root@archiso ~ # mkswap /dev/sda2
+Setting up swapspace version 1, size = 4 GiB (4294963200 bytes)
+no label, UUID=373190da-e759-46ab-bc2f-3a5f87d3b159
+root@archiso ~ # swapon /dev/sda2
+root@archiso ~ # mkfs.ext4 /dev/sda3
+mke2fs 1.47.0 (5-Feb-2023)
+Discarding device blocks: done
+Creating filesystem with 4062720 4k blocks and 1015808 inodes
+Filesystem UUID: d49e04ef-1353-497d-8458-a4d784969e88
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information: done
+```
+
+ -->
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\/arch-install\/arch_installing_guide.md"
+        var oid_likes = "likes_posts\/arch-install\/arch_installing_guide.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      Copy, <em>right?</em> 🤔
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="//localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
