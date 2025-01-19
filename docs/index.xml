@@ -9,7 +9,28 @@
     <managingEditor>d4rk1nblade@gmail.com (d4rkn19ht)</managingEditor>
     <webMaster>d4rk1nblade@gmail.com (d4rkn19ht)</webMaster>
     <copyright>Copy, _right?_ 🤔</copyright>
-    <lastBuildDate>Wed, 06 Nov 2024 15:49:13 +0700</lastBuildDate><atom:link href="https://sinkthemall.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Jan 2025 14:08:48 +0700</lastBuildDate><atom:link href="https://sinkthemall.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tim hieu co che phong thu cua antivirus</title>
+      <link>https://sinkthemall.github.io/posts/malware-section/tan-man-ve-malware/</link>
+      <pubDate>Sat, 04 Jan 2025 14:08:48 +0700</pubDate>
+      <author>d4rk1nblade@gmail.com (d4rkn19ht)</author>
+      <guid>https://sinkthemall.github.io/posts/malware-section/tan-man-ve-malware/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;1. Bàn luận về malware 
+    &lt;div id=&#34;1-b%C3%A0n-lu%E1%BA%ADn-v%E1%BB%81-malware&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#1-b%C3%A0n-lu%E1%BA%ADn-v%E1%BB%81-malware&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Malware là yếu tố quan trọng trong các cuộc tấn công mạng, đặc biệt khi các phương thức social engineering không còn hiệu quả. Dù các phần mềm chống virus đã được phát triển mạnh mẽ, tấn công sử dụng malware vẫn gia tăng. Dựa trên một &lt;a href=&#34;https://www.extrahop.com/blog/Dark-web-market-for-EDR-Killers&#34; target=&#34;_blank&#34;&gt;bài viết về thị trường các phần mềm chống EDR&lt;/a&gt; cho thấy việc vượt qua các cơ chế phòng thủ phức tạp vẫn hoàn toàn khả thi.
+Trong khi malware phá hoại (mã hóa dữ liệu, xóa file) thường dễ triển khai nhưng kém hiệu quả do các chính sách bảo mật, thì malware thám thính hoặc phục vụ APT đòi hỏi phải hoạt động tinh vi và vượt qua giám sát chặt chẽ.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://sinkthemall.github.io/posts/malware-section/tan-man-ve-malware/featured.jpg" />
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://sinkthemall.github.io/about/</link>
