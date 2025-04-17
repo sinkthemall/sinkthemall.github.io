@@ -46,9 +46,15 @@
     parent = "Category"
     pageRef = "posts/gamehack"
 [[main]]
+    name = "Pwn-exploit"
+    pageRef = "posts/Pwn-exploit"
+    weight = 30
+    parent = "Category"
+[[main]]
     name = "Tags"
     pageRef = "tags"
     weight = 40
+
 
 [[main]]
     pre = "github"
